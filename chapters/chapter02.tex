@@ -1,0 +1,109 @@
+\section{Black-Box testing}
+		
+\subsection{Equivalence Partitioning}
+	
+Divide all possible inputs into classes (partitions) such that:
+\begin{itemize}
+	\item There is a finite number of input equivalence classes
+	\item You may reasonably assume that
+	\begin{itemize}
+		\item the program behaves analogously for inputs in the same class
+		\item one test with a representative value from a class is sufficient
+		\item if the representative detects a fault
+		then other class members would detect the same fault
+	\end{itemize}
+\end{itemize}
+				
+%TODO add image from slide
+				
+Strategy:
+\begin{itemize}
+	\item Identify input equivalence classes
+	\begin{itemize}
+		\item Based on conditions on inputs/outputs in specification/description
+		\item Both valid and invalid input equivalence classes
+		\item Based on heuristics and experience:
+		\begin{itemize}
+			\item
+			\item
+			\item
+			\item ...
+		\end{itemize}
+	\end{itemize}
+	\item Define one/couple of test cases for each class
+	\begin{itemize}
+		\item Test cases that cover valid classes
+		\item Test cases that cover at most one invalid class
+	\end{itemize}
+\end{itemize}
+				
+%TODO add example
+			
+\subsection{Boundary Value Analysis}
+		
+\subsection{Error Guessing}
+			
+\begin{itemize}
+	\item Just ‘guess’ where the errors are...
+	\item Intuition and experience of tester
+	\item Ad hoc, not really a technique
+	\item But can be quite effective
+	\item Strategy:
+	\begin{itemize}
+		\item Make a list of possible errors or error-prone situations (often related to boundary conditions)
+		\item Write test cases based on this list
+	\end{itemize}
+\end{itemize}
+			
+\section{White-Box Testing}
+		
+\begin{itemize}
+	\itemsep0em
+	\item Testing based on program code\\
+	hence, programming language dependent
+	\item Extent to which (source) code is executed, i.e. covered
+	\item Different kind of coverage :
+	\begin{itemize}
+		\itemsep0em
+		\item path coverage
+		\item statement coverage
+		\item (multiple-)condition coverage
+		\item decision/branch coverage
+		\item ...
+	\end{itemize}			
+\end{itemize}
+			
+\subsection{Path Testing}
+				
+\begin{itemize}
+	\item Execute every possible path of a program, i.e., every possible sequence of statements
+	\item Strongest white-box criterion
+	\item Usually impossible: infinitely many paths (in case of loops)
+	\item So: not a realistic option
+	\item But note : enormous reduction w.r.t. all possible test cases (each sequence of statements executed for only one value)
+\end{itemize}
+		
+\subsection{Statement Coverage}
+			
+\begin{itemize}
+	\itemsep0em
+	\item Execute every statement of a program
+	\item Relatively weak criterion 
+	\item Weakest white-box criterion
+\end{itemize}
+				
+\subsection{Branch Coverage}
+			
+\begin{itemize}
+	\item Bracn coverage == decision coverage
+	\item Execute every branch of a program: each possible outcome of each decision occurs at least once
+	\item Example:
+	\begin{itemize}
+		\item \verb|IF b THEN s1 ELSE s2|
+		\item \verb|CASE x OF|
+	\end{itemize}
+\end{itemize}
+			
+\subsection{Condition Coverage}
+			
+\subsection{Branch Coverage}
