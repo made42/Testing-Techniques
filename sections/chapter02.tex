@@ -235,4 +235,116 @@ Based on experience / heuristics:
 	\item Design additional white-box test cases for not covered code
 \end{itemize*}
 
+\subsection{Dynamic Techniques}
 
+\subsubsection{Decision Table Testing}
+
+\subsubsection{State Transition Testing}
+
+\begin{itemize*}
+\item The behavior of a system's functionality may depend on its state:
+\begin{itemize*}
+	\item mount of money inserted $\Rightarrow$ push ``coffee'' button
+	\item account balance $\Rightarrow$ withdraw money
+	\item user status $\Rightarrow$ login into system
+	\item order state $\Rightarrow$ ship goods
+	\item number entered in GUI $\Rightarrow$ push ``V'' button
+	\item stack size $\Rightarrow$ pop from stack
+	\item filled form fields $\Rightarrow$ submit form
+	\item process state $\Rightarrow$ swap out process
+	\item $\dots$
+\end{itemize*}
+\item Several kinds of state machines have been defined:
+\begin{itemize*}
+	\item \textbf{Automata / Formal Languages theory:}
+	\begin{itemize*}
+		\item Finite Automata (FA, DFA, FSM)
+		\item Nondeterministic Finite Automata (NFA)
+		\item Push-Down Automata (PDA)
+		\item Turing Machine (TM)
+		\item Labeled Transition System (LTS)
+		\item Moore Machine
+		\item Mealy Machine
+	\end{itemize*}
+	\item \textbf{System Modeling:}
+	\begin{itemize*}
+		\item State Charts
+		\item UML State Machines
+	\end{itemize*}
+\end{itemize*}
+\end{itemize*}
+
+\begin{itemize*}
+	\item A model is an abstraction of the system
+	\item When there is a circular path in the model, there are infinitely many paths to be potentially tested, e.g.
+	\begin{itemize*}
+		\item ..., (swap out, swap in)*, ...
+	\end{itemize*}
+	\item Thus, simpler (finite) heuristics are needed in practice,	e.g.:
+	\begin{itemize*}
+		\item cover each state
+		\item cover each event
+		\item cover each transition
+		\item cover transition pairs, triples, $\dots$
+		\item test purposes (interesting paths)
+		\item $\dots$
+	\end{itemize*}	
+\end{itemize*}
+
+
+\subsubsection{Use Case Testing}
+
+\begin{itemize*}
+	\item A Use Case
+	\begin{itemize*}
+		\item captures a functional requirement of a system
+		\item describes the interaction between a primary actor and
+		the system
+		\item is a sequence of simple steps
+		\item consists of:
+		\begin{itemize}
+			\item preconditions and postconditions
+			\item main scenarios and alternative scenarios
+		\end{itemize}		
+	\end{itemize*}
+\end{itemize*}
+
+\subsubsection{White Boxes}
+
+\begin{itemize*}
+	\item ISTQB glossary:\\
+	\underline{\textbf{white-box test design technique}}\\
+	\underline{(structural test design technique)}\\
+	
+	\textit{A procedure to derive and/or select test cases base on an analysis of the internal structure of a component or system.}
+\end{itemize*}
+
+\subsubsection{More Coverage...}
+
+\begin{itemize*}
+	\item Function coverage
+	\item Call coverage
+	\item Linear Code Sequence and Jump (LCSAJ) coverage
+	\item Data flow coverage
+	\item Object code branch coverage
+	\item Loop coverage
+	\item Race Coverage
+	\item Relation operator coverage
+	\item Weak mutation Coverage
+	\item Table coverage
+	\item $\ldots$
+\end{itemize*}
+
+\subsubsection{Structural Test Case Design}
+
+\begin{itemize*}
+	\item Structural test case design asks questions like:
+	\begin{itemize*}
+		\item how can I reach this part of the code?
+		\item how can I make this expression true?
+	\end{itemize*}
+	\item Many interesting properties of programs are hard, or even
+	undecidable, for instance reachability of code
+	\item Structural test case design is in general a difficult task
+	\item A hot research topic (symbolic testing, concolic testing, software model checking, $\ldots$)
+\end{itemize*}
