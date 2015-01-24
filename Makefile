@@ -5,7 +5,7 @@ TMPDIR=${SRCDIR}/tmp
 
 TEXFLAGS=-output-directory ${TMPDIR}
 
-build: ${SRCDIR}/*.tex ${SRCDIR}/chapters/*.tex
+build: ${SRCDIR}/*.tex ${SRCDIR}/sections/*.tex
 	mkdir -p ${TMPDIR}
 	pdflatex ${TEXFLAGS} ${SRCDIR}/${TEXFILE}.tex
 	pdflatex ${TEXFLAGS} ${SRCDIR}/${TEXFILE}.tex
