@@ -2,33 +2,12 @@
 \textbf{Pairwise combination} 
 \begin{itemize*}
 	\item Generate combinations that efficiently cover all 	pairs (triples,…) of classes
-	\item Rationale: most failures are triggered by single values or combinations of a few values. Covering pairs (triples,...) reduces the number of test cases,but reveals most faults.
+	\item Rationale: most failures are triggered by single values or combinations of a few values. Covering pairs (triples,\ldots) reduces the number of test cases,but reveals most faults.
 \end{itemize*}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{testingConstraint1.jpg}
-	\caption{}
-	\label{fig:testingC1}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{testingConstraint2.jpg}
-	\caption{}
-	\label{fig:testingC2}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{testingConstraint3.jpg}
-	\caption{}
-	\label{fig:testingC3}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{testingConstraint4.jpg}
-	\caption{}
-	\label{fig:testingC4}
-\end{figure}
+\includegraphics[width=0.7\linewidth]{testingConstraint1.jpg}
+\includegraphics[width=0.7\linewidth]{testingConstraint2.jpg}
+\includegraphics[width=0.7\linewidth]{testingConstraint3.jpg}
+\includegraphics[width=0.7\linewidth]{testingConstraint4.jpg}
 
 \textbf{Modified condition/decision}
 \begin{itemize*}
@@ -44,12 +23,7 @@
 \end{itemize*}
 \end{itemize*}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{testingConstraint5.jpg}
-	\caption{}
-	\label{fig:testingC5}
-\end{figure}
+\includegraphics[width=0.7\linewidth]{testingConstraint5.jpg}
 
 \textbf{Comments}
 \begin{itemize*}
@@ -67,7 +41,7 @@
 
 \subsubsection{Mutation Testing}
 \begin{itemize*}
-\item Evaluation of test suite : What is good test data ?
+\item Evaluation of test suite: What is good test data?
 \item Measure/comparison of test data quality/test methods
 \item Improve/increment a test set
 \item Evaluation by large number of mutants: small modifications applied to IUT
@@ -77,15 +51,15 @@
 \end{itemize*}
 
 
-\textbf{Assumptions :}
+\textbf{Assumptions:}
 \begin{itemize*}
 \item Competent programmer hypothesis: programmers write programs that are (almost) correct
-\item Coupling effect : if small faults are detected then also complex faults are
-\item Mutant operators : small faults can be described as small modifications of the program by a set of predefined mutant operators
+\item Coupling effect: if small faults are detected then also complex faults are
+\item Mutant operators: small faults can be described as small modifications of the program by a set of predefined mutant operators
 \begin{itemize*}
-\item x $\rightarrow$ y,  $\geq \rightarrow > $, $ < \rightarrow <>$, + $\rightarrow$ -
+\item x $\rightarrow$ y,  $\geq \rightarrow > $, $ < \rightarrow <>$, + $\rightarrow -$ 
 \end{itemize*}
-\item Test oracle : criterion to check correctness of output
+\item Test oracle: criterion to check correctness of output
 \item Complexity
 	\begin{itemize*}
 		\item  number of mutants $\approx O(loc^2)$
@@ -96,7 +70,7 @@
 \item Optimizations possible:
 \begin{itemize*}
 \item systematic test generation from living mutants
-\item symbolic methods : mutation templates
+\item symbolic methods: mutation templates
 \item approximations
 \end{itemize*}
 \end{itemize*}

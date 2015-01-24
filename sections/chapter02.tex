@@ -17,7 +17,7 @@
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{TypesOfTesting}
-	\caption Types of Testing
+    \caption{Types of Testing}
 \end{figure}
 
 Development of test cases
@@ -28,7 +28,7 @@ Testing cannot guarantee the absence of faults\\ $\Rightarrow$\\
 How to select subset of test cases from all possible test cases with a high chance of detecting most faults?\\
 $\Rightarrow$\\
 Test Case Design Strategies\\
-~\\
+
 Because: if we have good test suite then we can have more confidence in the product that passes that test suite
 \end{center}
 
@@ -61,13 +61,13 @@ Strategy:
 		\item Both valid and invalid input equivalence classes
 		\item Based on heuristics and experience:
 		\begin{itemize*}
-			\item ``input x in [1..10]''
+			\item ``input x in $[1\ldots10]$''
 			$\rightarrow$ classes: x $<$ 1, 1 $\leq$ x $\leq$ 10, x $>$ 10
 			\item ``enumeration A, B, C'' $\rightarrow$ classes: A, B, C, not \{A,B,C,\}
 			\item ``input integer n''
 			$\rightarrow$ classes: n not an integer,
 			n $<$ min, min $\leq$ n$<$0, 0$\leq$ n $\leq$max, n $>$max
-			\item$\ldots$
+			\item\ldots
 		\end{itemize*}
 	\end{itemize*}
 	\item Define one/couple of test cases for each class
@@ -83,13 +83,13 @@ Strategy:
 
 Based on experience / heuristics:
 \begin{itemize*}
-\item Testing boundary conditions of eq. classes is more effective i.e. values directly on, above, and beneath edges of classes
+\item Testing boundary conditions of eq.\ classes is more effective i.e.\ values directly on, above, and beneath edges of classes
 \item Choose input boundary values as tests in input classes instead of, or additional to arbitrary values
 \item Choose also inputs that invoke output boundary values (values on the boundary of output classes)
 \item Example strategy as extension of equivalence partitioning:
 \begin{itemize*}
-	\item choose one (n) arbitrary value(s) in each eq. class
-	\item choose values exactly on lower and upper boundaries of eq. class
+	\item choose one (n) arbitrary value(s) in each eq.\ class %chktex 36
+	\item choose values exactly on lower and upper boundaries of eq.\ class
 	\item choose values immediately below and above each boundary (if applicable)
 \end{itemize*}
 \end{itemize*}
@@ -99,7 +99,7 @@ Based on experience / heuristics:
 \subsubsection{Error Guessing}
 
 \begin{itemize*}
-	\item Just `guess’ where the errors are$\ldots$
+	\item Just `guess’ where the errors are\ldots
 	\item Intuition and experience of tester
 	\item Ad hoc, not really a technique
 	\item But can be quite effective
@@ -114,8 +114,8 @@ Based on experience / heuristics:
 	\begin{itemize*}
 		\item parts with unclear specifications
 		\item developed by junior programmer while his wife was pregnant $\ldots\ldots$
-		\item complex code :
-		measure code complexity - tools available (McGabe, Logiscope,$\ldots$)
+		\item complex code:
+		measure code complexity, tools available (McCabe, Logiscope,\ldots)
 	\end{itemize*}
 	\item High-risk code will be more thoroughly tested (or be rewritten immediately $\ldots\ldots$)
 	
@@ -132,7 +132,7 @@ Based on experience / heuristics:
 		\item Decision tables
 		\item State transition testing
 		\item Error guessing
-		\item ............
+        \item \ldots
 		\begin{itemize*}
 			\item test derivation from formal specification
 		\end{itemize*}		
@@ -166,7 +166,7 @@ Based on experience / heuristics:
 		\item statement coverage
 		\item (multiple-) condition coverage
 		\item decision/branch coverage
-		\item $\ldots$
+		\item \ldots
 	\end{itemize*}
 \end{itemize*}
 
@@ -202,9 +202,9 @@ Based on experience / heuristics:
 		\item \verb|IF b THEN s1 ELSE s2|
 		\item \verb|CASE x OF|
 		\begin{enumerate}
-			\item $\ldots$
-			\item $\ldots$
-			\item $\ldots$
+			\item \ldots
+			\item \ldots
+			\item \ldots
 		\end{enumerate}
 	\end{itemize*}
 \end{itemize*}
@@ -229,8 +229,8 @@ Based on experience / heuristics:
 \begin{itemize*}
 	\item Don't start with designing white-box test cases!
 	\item Start with black-box test cases
-	(equivalence partitioning, boundary value analysis, cause effect graphing, derivation with formal methods, .....)
-	\item Check white-box coverage (statement-, branch-, condition-, ...... coverage)
+	(equivalence partitioning, boundary value analysis, cause effect graphing, derivation with formal methods, \ldots)
+	\item Check white-box coverage (statement-, branch-, condition-, \ldots coverage)
 	\item Use a coverage tool
 	\item Design additional white-box test cases for not covered code
 \end{itemize*}
@@ -276,9 +276,9 @@ Based on experience / heuristics:
 
 \begin{itemize*}
 	\item A model is an abstraction of the system
-	\item When there is a circular path in the model, there are infinitely many paths to be potentially tested, e.g.
+	\item When there is a circular path in the model, there are infinitely many paths to be potentially tested, e.g.\
 	\begin{itemize*}
-		\item ..., (swap out, swap in)*, ...
+		\item \ldots, (swap out, swap in)*, \ldots
 	\end{itemize*}
 	\item Thus, simpler (finite) heuristics are needed in practice,	e.g.:
 	\begin{itemize*}
@@ -319,7 +319,7 @@ Based on experience / heuristics:
 	\textit{A procedure to derive and/or select test cases base on an analysis of the internal structure of a component or system.}
 \end{itemize*}
 
-\subsubsection{More Coverage...}
+\subsubsection{More Coverage\ldots}
 
 \begin{itemize*}
 	\item Function coverage
@@ -332,7 +332,7 @@ Based on experience / heuristics:
 	\item Relation operator coverage
 	\item Weak mutation Coverage
 	\item Table coverage
-	\item $\ldots$
+	\item \ldots
 \end{itemize*}
 
 \subsubsection{Structural Test Case Design}
@@ -346,5 +346,5 @@ Based on experience / heuristics:
 	\item Many interesting properties of programs are hard, or even
 	undecidable, for instance reachability of code
 	\item Structural test case design is in general a difficult task
-	\item A hot research topic (symbolic testing, concolic testing, software model checking, $\ldots$)
+	\item A hot research topic (symbolic testing, concolic testing, software model checking, \ldots)
 \end{itemize*}
