@@ -28,7 +28,7 @@ Characteristics according to ISO 9126: FURP ME
 	\hline Bug & fault \\ 	
 \end{tabularx} 
 
-\subsubsection{sorts of testing}
+\subsubsection{Sorts of testing}
 
 \textbf{Quality characteristics:}
 \begin{multicols}{2}
@@ -54,20 +54,24 @@ Characteristics according to ISO 9126: FURP ME
 \begin{itemize*}
 	\item developer
 	\item tester
-	\item acceptance
-	\item user
+    \item acceptance (by user)
 	\item certification
 	\item production
 \end{itemize*}
 
-\textbf{Phase:}
+\textbf{Trajectory:}
 \begin{itemize*}
 	\item unit
-	\item integration
 	\item module
+	\item integration
 	\item system
+    \item acceptance
+        \begin{itemize*}
+            \item FAT\@: Factory Acceptance Test
+            \item PAT\@: Production Acceptance Test
+            \item SAT\@: Site Acceptance Test
+        \end{itemize*}
 	\item regression
-	\item duration
 \end{itemize*}
 
 \textbf{Black box}
