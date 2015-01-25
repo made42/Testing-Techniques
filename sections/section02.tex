@@ -92,7 +92,13 @@ Based on experience / heuristics:
 \end{itemize*}
 \end{itemize*}
 
-%TODO example
+Example: for testing the \verb|abs| function, you would create equivalence classes $<0$ and $\geq 0$. Test cases are then:
+\begin{itemize*}
+    \item class $x<0$, arbitrary value $x = -10$
+    \item class $x \geq 0$, arbitrary value $x = 100$
+    \item classes $x<0, x\geq 0$ on boundary: $x=0$
+    \item classes $x<0, x \geq 0$, below and above: $x=-1, x=1$
+\end{itemize*}
 
 \subsubsection{Error Guessing}
 
