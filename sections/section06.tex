@@ -1,0 +1,57 @@
+\includegraphics[page=2,scale=0.25,trim={0 7cm 0 0},clip]{slides/learningmealy.pdf}
+\includegraphics[page=3,scale=0.25,trim={0 7cm 0 0},clip]{slides/learningmealy.pdf}
+\includegraphics[page=5,scale=0.25,trim={0 5cm 0 0},clip]{slides/learningmealy.pdf}
+\includegraphics[page=7,scale=0.25,trim={0 10cm 0 0},clip]{slides/learningmealy.pdf}
+
+\subsection{Introduction}
+
+\includegraphics[page=21,scale=0.25,trim={0 5cm 0 0},clip]{slides/learningmealy.pdf}
+
+\subsection{Active Automata Learning primer}
+
+\subsection{Mealy Machines}
+A Mealy machine is defined as a tuple $M = \langle S, s, \Sigma, \Omega, \delta, \lambda\rangle$ where
+\begin{itemize*}
+	\item S is a finite nonempty set of states (be n = |S| the size of the Mealy machine),
+	\item s $\in$ S is the initial state,
+	\item $\Sigma$ is a finite input alphabet,
+	\item $\Omega$ is a finite output alphabet,
+	\item $\delta$: Sx$\Sigma\rightarrow$S is the transition function, and
+	\item $\lambda$: Sx$\Sigma\rightarrow\Omega$ is the output function.
+\end{itemize*}
+
+Extend $\delta$ e $\lambda$ for words\\
+
+\begin{tabular}{cl}
+	$\delta*$ & $: Sx\Sigma * \rightarrow S$: \\ 
+	& $\delta* (s,\epsilon)= s$\\ 
+	& $\delta* (s, \alpha w) = \delta * (\delta(s,  \alpha), w)$ 
+\end{tabular} 
+~\\\\
+\begin{tabular}{cl}	
+	$\lambda*$ & $: Sx\Sigma * \rightarrow\Omega$:\\
+	& $\lambda* (s,\epsilon)=\emptyset$\\
+	& $\lambda* (s, w\alpha) = \lambda(\delta * (s, w), \alpha)$
+\end{tabular} 
+
+\subsection{Nerode relation}
+
+Let $P:\Sigma*\Omega$ {\tiny (let’s define a Mealy machine just as a function that, given a word, provides the single output observed after having that word in input)}\\
+
+
+Definition (Equivalence of words w.r.t. $PL$)
+
+
+Two words $u,u' \in \Sigma*$ are equivalent w.r.t. $\equiv P$, if and only if for all continuations $v \in \Sigma*$, the concatenated words $uv$ and $u'v$ are mapped to the same output by $P$:
+
+\begin{center}
+	$u \equiv_{P} \Leftrightarrow u'( \forall v \in \Sigma* . P(uv) = P(u'v))$
+\end{center}
+
+The idea is that each equivalence class (over $\equiv_{P}$) represents a state in the hypothesis. Agree?
+
+\subsection{Counterexample handling}
+
+\subsection{Other formalisms}
+
+\subsection{Towards Nondeterminism}
