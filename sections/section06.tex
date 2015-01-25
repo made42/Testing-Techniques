@@ -26,8 +26,8 @@ Extend $\delta$ e $\lambda$ for words\\
 	$\delta*$ & $: Sx\Sigma * \rightarrow S$: \\ 
 	& $\delta* (s,\epsilon)= s$\\ 
 	& $\delta* (s, \alpha w) = \delta * (\delta(s,  \alpha), w)$ 
-\end{tabular} 
-~\\\\
+\end{tabular}
+
 \begin{tabular}{cl}	
 	$\lambda*$ & $: Sx\Sigma * \rightarrow\Omega$:\\
 	& $\lambda* (s,\epsilon)=\emptyset$\\
@@ -45,7 +45,7 @@ Definition (Equivalence of words w.r.t. $PL$)
 Two words $u,u' \in \Sigma*$ are equivalent w.r.t. $\equiv P$, if and only if for all continuations $v \in \Sigma*$, the concatenated words $uv$ and $u'v$ are mapped to the same output by $P$:
 
 \begin{center}
-	$u \equiv_{P} \Leftrightarrow u'( \forall v \in \Sigma* . P(uv) = P(u'v))$
+	$u \equiv_{P} \Leftrightarrow u'( \forall v \in \Sigma^*. P(uv) = P(u'v))$ %chktex 48
 \end{center}
 
 The idea is that each equivalence class (over $\equiv_{P}$) represents a state in the hypothesis. Agree?
