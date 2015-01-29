@@ -1,0 +1,10 @@
+\textbf{Soundness:} $t$ will never fail with correct implementation. $i$ is correct w.r.t.\ to $s$ $\Rightarrow$ $i$ passes $t$\\
+\textbf{Completeness:} Each incorrect implementation can be detected with a generated test $t$. $i$ passes $t$ $\Rightarrow$ $i$ is correct w.r.t.\ to $s$\\
+\textbf{IOTS:} Input-Output Transition Systems. Always enabled inputs.\\
+\textbf{IOCO:} $i \text{ioco} 4 =_{\text{def}} \forall \sigma \in Straces(s): out(i \text{after} \sigma) \subseteq out(s \text{after} \sigma)$\\
+$i$ ioco-conforms to $s$, iff
+\begin{itemize*}
+    \item if $i$ produces output $x$ after trace $\sigma$, then $s$ can produce $x$ after $\sigma$
+    \item if $i$ cannot produce any output after trace $\sigma$, then $s$ cannot produce any output after $\sigma$ (quiscence $\delta$)
+\end{itemize*}
+
